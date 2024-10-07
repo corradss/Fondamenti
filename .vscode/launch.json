@@ -21,6 +21,11 @@
                     "description": "Imposta Versione Disassembly su Intel",
                     "text": "-gdb-set disassembly-flavor intel",
                     "ignoreFailures": true
+                },
+                {
+                    "description": "Importa librerie",
+                    "text": "-lm",
+                    "ignoreFailures": true
                 }
             ],
             "preLaunchTask": "C/C++: gcc compila il file attivo",
