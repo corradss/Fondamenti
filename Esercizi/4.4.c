@@ -3,29 +3,35 @@
 #include <stdio.h>
 
 int main(){
-    int max, min;
+    float max, min;
     int n;
-    int num;
+    float num;
     int i;
 
     printf("Inserisci il numero della sequenza: ");
     scanf("%d", &n);
 
-    printf("Inserisci il numero: ");
-    scanf("%d", &num);
-
-    max = num;
-    min = num;
-
-    for (i = 0; i < (n - 1); i++){
-        if (num < min){min = num;}
-        if (num > max){max = num;}
-
+    if (n > 0){
         printf("Inserisci il numero: ");
-        scanf("%d", &num);
+        scanf("%f", &num);
+
+        max = num;
+        min = num;
+
+        for (i = 0; i < (n - 1); i++){
+            if (num < min){min = num;}
+            if (num > max){max = num;}
+
+            printf("Inserisci il numero: ");
+            scanf("%f", &num);
+        }
+
+        printf("max: %g\nmin: %g\n", max, min);
+    }else{
+        printf("Hai introdotto un n non valido.\n");
     }
 
-    printf("max: %d\nmin: %d\n", max, min);
     
+
     return 0;
 }
