@@ -11,6 +11,7 @@ int main(void){
     }
     else{
       printf("Tocca il prossimo appello (fai schifo)\n");
+      printf("sto cazzo");
     }
   }
   else{
