@@ -24,6 +24,8 @@ int main(){
         printf("Inserisci il numero: ");
         scanf("%d", &num);
     }
-    
+
     printf("max: %d\nmin: %d\n", max, min);
+    
+    return 0;
 }
