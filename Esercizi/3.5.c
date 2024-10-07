@@ -1,3 +1,6 @@
+// scrivi un programma in linguaggio C che legga da tastierai valori delle lunghezze
+// dei tre lati di un triangolo (detti a, b, e c), e determini se il triangolo è equilatero, isoscele, scaleno o rettangolo
+
 #include <stdio.h>
 
 int main(){
