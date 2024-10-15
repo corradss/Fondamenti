@@ -1,26 +1,36 @@
 #include <stdio.h>
+
 #define N 20
-#define NUM_MAX 100
-#define NUM_MIN 10
 
 int main(){
-    int arr [N];
+    int arr[N];
+    int num;
     int i, j;
-    int duplicato = 0;
+    int presente, trovato;
 
-    for (i = 0; i < N && duplicato == 0; i++){
-        scanf("%d", &arr[i]);
+    presente = 0;
+    trovato = 0;
 
-        if (arr[i] >= NUM_MIN && arr[i] <= NUM_MAX){
-            for (j = 0; j < i; j++){
-                if (arr[i] == arr[j]){
-                    duplicato = arr[i];
-                }
+    for (i = 0; i < N; i++){
+        printf("Inserisci il numero: ");
+        scanf("%d", &num);
+        
+        for (j = 0, trovato = 0; j < i && !trovato; j++){
+            if (arr[j] == num){
+                presente = 1;
+                trovato = 1;
             }
-            
         }
-        else{printf("Il numero non è compreso tra %d e %d.\n", NUM_MIN, NUM_MAX);i -= 1;}
-        //if (duplicato == 1){printf("Il numero %d à già stato inserito.\n", arr[i]); duplicato = 0;}
+        if (!presente){
+            arr[i] = num;
+        }else{
+            printf("Il numero era gà presente\n");
+            presente = 0;
+            i--;
+        }
+        
     }
-    printf("Il numero %d à già stato inserito.\n", duplicato);
+    for (int l = 0; l < N; l++){
+        printf("%d ", arr[l]);
+    }
 }
